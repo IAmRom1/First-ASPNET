@@ -14,6 +14,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.Configure<RouteOptions>(options => options.LowercaseUrls = true);
 builder.Services.AddControllers();
 
+builder.Services.AddScoped<IUserService, UserService>();
+
 //MAPPER
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
